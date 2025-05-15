@@ -1,3 +1,10 @@
+#This function creates a special "matrix" object that can store (cache) its inverse.It returns a list of functions to:
+## - set a new matrix,
+## - get the matrix,
+## - set the inverse of the matrix,
+## - get the cached inverse.
+
+## to realise to function of makeCacheMatrix
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL 
     
@@ -15,6 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
          getInverse = getInverse)
 }
 
+
+## to realise to function of cachesolve
 cacheSolve <- function(x, ...) {
     inv <- x$getInverse()
   
